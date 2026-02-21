@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Samriddhi AI Frontend</title>
+</head>
+<body>
+    <h1>Frontend Connected to Backend</h1>
+    <button onclick="callAPI()">Call Backend</button>
+    <p id="output"></p>
+
+    <script>
+        async function callAPI() {
+            const response = await fetch("https://YOUR_BACKEND_URL/api");
+            const data = await response.json();
+            document.getElementById("output").innerText = data.text;
+        }
+    </script>
+</body>
+</html>
